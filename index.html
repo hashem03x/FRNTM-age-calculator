@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="card">
+      <div class="head">
+        <div class="date">
+          <div class="input">
+            <label for="Day">Day</label>
+            <input id="Day" type="number" min="1" max="31" placeholder="DD" />
+          </div>
+          <div class="input">
+            <label for="Month">Month</label>
+            <input id="Month" type="number" min="1" max="12" placeholder="MM" />
+          </div>
+          <div class="input">
+            <label for="Year">Year</label>
+            <input
+              id="Year"
+              type="number"
+              min="1890"
+              max="2023"
+              placeholder="YYYY"
+            />
+          </div>
+          <button class="btn">
+            <img src="assets/images/icon-arrow.svg" />
+          </button>
+        </div>
+      </div>
+      <div class="result">
+        <div class="row"><span class="year">--</span>Years</div>
+        <div class="row"><span class="month">--</span>Months</div>
+        <div class="row"><span class="day">--</span>Days</div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

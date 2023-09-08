@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+@font-face {
+  font-family: popp-bold;
+  src: url(assets/fonts/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: popp-Exbold;
+  src: url(assets/fonts/Poppins-ExtraBold.ttf);
+}
+@font-face {
+  font-family: popp-Exboldit;
+  src: url(assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+@font-face {
+  font-family: popp-reg;
+  src: url(assets/fonts/Poppins-Regular.ttf);
+}
+body {
+  background-color: rgb(14 227 227);
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  font-family: popp-reg;
+}
+input:focus {
+  outline: none;
+  border: none;
+}
+.card {
+  position: relative;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  padding: 40px 120px 40px 40px;
+  border-radius: 20px;
+  border-bottom-right-radius: 150px;
+}
+.card .head {
+  margin-bottom: 60px;
+}
+.card .date {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.card .date::after {
+  content: "";
+  position: absolute;
+  background-color: darkgrey;
+  width: 330px;
+  height: 1px;
+  bottom: -20px;
+  left: 0;
+}
+.date .input {
+  display: flex;
+  flex-direction: column;
+}
+.validError {
+  font-size: 10px;
+  font-weight: bold;
+  color: red;
+  margin: 5px 0;
+}
+.date .input:not(:last-of-type) {
+  margin-right: 20px;
+}
+.date .input label {
+  margin: 0 0 4px -35px;
+  color: #615252;
+  font-size: 12px;
+  font-weight: bold;
+}
+.date .input input {
+  padding: 6px;
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  transition: 0.3s;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: popp-bold;
+}
+.date .input input:focus {
+  border: 1px solid blue;
+}
+
+.date .btn {
+  position: absolute;
+  bottom: -40px;
+  right: -95px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: blue;
+  color: white;
+  padding: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+  z-index: 200;
+}
+.date .btn:hover {
+  background-color: black;
+}
+.date .btn img {
+  max-width: 100%;
+}
+.card .result {
+  text-align: left;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: popp-Exboldit;
+}
+.card .result .row {
+  display: flex;
+  align-items: center;
+}
+.card .result .row span {
+  color: blue;
+  font-size: 55px;
+  margin-right: 6px;
+}
+@media (max-width: 769px) {
+  .card {
+    padding: 20px 80px 20px 20px;
+  }
+  .card .date::after {
+    width: 320px;
+  }
+  .date .btn {
+    right: -65px;
+  }
+}
+@media (max-width: 376px) {
+  .card {
+    padding: 20px;
+  }
+  .date .btn {
+    right: -25px;
+  }
+  .card .date::after {
+    width: 280px;
+  }
+}
